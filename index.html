@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Проект марафона «HTML Academy»">
+    <meta name="keywords" content="html, css, js, блог, вёрстка,">
+    <meta name="author" content="Александр Рева">
+    <title>Блог Александра Ревы</title>
+    <link rel="stylesheet" type="text/css" href="src/vendor/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/pages/imdex/style.css">
+    <!--<link rel="icon" href="">-->
+  </head>
+  <body>
+      <header class="header">
+        <div class="header__wrapper">
+          <a href="index.html"><img src="src/icons/logo.svg" alt="Блог Александра Ревы" width="130"></a>
+          <menu class="header__menu">
+            <li><a href="#articles" title="Переместится вниз по странице">Статьи</a></li>
+            <li><a href="#about-me" title="Переместится вниз по странице">Обо мне</a></li>
+            <li><a href="#portfolio-block" title="Переместится вниз по странице">Портфолио</a></li>
+            <li><a href="#write-me-text" title="Переместится вниз по странице">Написать мне</a></li>
+          </menu>
+        </div>
+      </header>
+      <h1 class="hidden">Первая страница блога</h1>
+      <main>
+        <section class="content">
+          <div class="content__header">
+            <h2 class="align-left" id="articles">Все статьи</h2>
+            <select class="aside-menu" name="articale-filter">
+              <option class="aside-menu__item" value="town">Город</option>
+              <option class="aside-menu__item" value="books">Книги</option>
+              <option class="aside-menu__item" value="travel">Путешествия</option>
+              <option class="aside-menu__item" value="recipe">Рецепты</option>
+              <option class="aside-menu__item" value="foto">Фотографии</option>
+              <option class="aside-menu__item" value="all-artcl" selected>Все статьи</option>
+            </select>
+          </div>
+          <div class="article__preview">
+            <div class="artcl article__slide" data-tag="travel">
+              <img src="src/images/image-1.jpg" alt="Улица Берлина" class="article__img">
+              <a href="src/pages/article/article.html" title="Перейти на страницу статьи">
+                <h3 class="article__header">Путешествие в Берлин в августе</h3>
+                <p class="article__description">Летний месяц я провела в столице Германии 
+                  вместе с друзьями. И вот как это было!</p>
+              </a>
+              <div class="artical__tags">
+                <p>Теги: путешествия</p>
+                <time datetime="2020-09-29">29.09.2020</time>
+              </div>
+            </div>
+            <div class="artcl article__slide" data-tag="town">
+              <img src="src/images/image-2.jpg" alt="Стакан Колдбрю" class="article__img">
+              <a href="src/pages/article/article.html" title="Перейти на страницу статьи">
+                <h3 class="article__header">Где выпить колдбрю в Москве</h3>
+                <p class="article__description">Собрала для вас список любимых кофеен,
+                  где подают лучший летний напиток.</p>
+              </a>
+              <div class="artical__tags">
+                <p>Теги: город</p> 
+                <time datetime="2020-07-24">24.07.2020</time>
+              </div>
+            </div>
+            <div class="artcl article__slide" data-tag="books">
+              <img src="src/images/image-3.jpg" alt="Книги" class="article__img">
+              <a href="src/pages/article/article.html" title="Перейти на страницу статьи">
+                <h3 class="article__header">Прочитано: книжные рекомендации</h3>
+                <p class="article__description">Рассказываю о прочитанных за последнее 
+                  время книгах: фавориты и провалы.</p>
+              </a>
+              <div class="artical__tags">
+                <p>Теги: книги</p>
+                <time datetime="2020-07-15">15.07.2020</time>
+              </div>
+            </div>
+          </div>
+          <div class="article__preview">
+            <div class="artcl article__slide_big" data-tag="foto">
+              <img src="src/images/image-4.jpg" alt="Кусты роз" class="article__img article__img_big">
+              <div class="articale__text-wrapper">
+                <a href="src/pages/article/article.html" title="Перейти на страницу статьи">
+                  <h3 class="article__header article__header_big">Снимки на плёнку</h3>
+                  <p class="article__description article__description_big">Поделилась с вами весенними фотографиями, 
+                    и секретами удачных снимков.</p>
+                </a>
+                <div class="artical__tags artical__tags_white">
+                  <p>Теги: фотографии</p> 
+                  <time datetime="2020-06-29">29.06.2020</time>
+                </div>
+              </div>
+            </div>
+            <div class="artcl article__slide_big" data-tag="recipe">
+              <img src="src/images/image-5.jpg" alt="Кусты роз" class="article__img article__img_big">
+              <div class="articale__text-wrapper">
+                <a href="src/pages/article/article.html" title="Перейти на страницу статьи">
+                  <h3 class="article__header article__header_big">Домашний чизкейк</h3>
+                  <p class="article__description article__description_big">Что может быть лучше чизкейка с сезонными
+                    ягодами? Только домашний чизкейк!</p>
+                </a>
+                <div class="artical__tags artical__tags_white">
+                  <p>Теги: рецепты</p> 
+                  <time datetime="2020-06-24">24.06.2020</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="custom-button" type="button">Показать ещё</button>
+        </section>
+        <section class="content">
+          <h2 id="about-me">Обо мне</h2>
+          <article class="article article__preview article-wrapper">
+            <img src="src/images/about-me.jpg" alt="Я на пляже" class="article__img">
+            <div class="article__text">
+              <p class="article__paragraph">Всем привет! Меня зовут Аня, и это мой личный блог.
+                Здесь ты найдёшь рассказы о моих путешествиях, снимки
+                на плёнку, рецепты, обзоры на книги. В общем, тексты о том,
+                что мне инетресно.</p>
+              <p class="article__paragraph">Я работаю копирайтером, поэтому мой блоге — это ещё и моё
+                портфолио. Ниже размещены несколько моих лучших
+                рабочих текстов. Буду рада новым сотрудничествам!</p>
+              <p class="article__paragraph">Если вы хотите написать мне — это можно сделать в соцсетях
+                или через 
+                <a href="#write-me-text" title="Переместится ниже по странице">форму</a>
+                . Всегда приятно услышать обратную связь
+                от читателей и познакомиться поближе.</p>
+              <p class="article__paragraph">Приятного чтения!</p>
+              <q class="article__quote">Я верю, что каждый раз пробуя новое,
+                выходящее за зону моего комфорта,<br />
+                я действительно узнаю настояющую
+                себя.</q>
+            </div>
+          </article>
+        </section>
+        <section class="content">
+          <h2 id="portfolio-block">Портфолио</h2>
+          <div class="article__preview">
+            <div class="article__slide portfolio__slide">
+              <h3 class="article__header article__header_big">Блог HTML Academy</h3>
+              <h3 class="article__header portfolio__header">&laquo;Как учиться продуктивно&raquo;</h3>
+              <p class="article__description portfolio__descript">Про основные методы обучения,
+                которые помогут быстро и надолго
+                запомнить информацию.</p>
+            </div>
+            <div class="article__slide portfolio__slide">
+              <h3 class="article__header article__header_big">Журнал &laquo;LNK&raquo;</h3>
+              <h3 class="article__header portfolio__header">&laquo;Зачем поцели нужны человеку? И какие они бывают&raquo;</h3>
+              <p class="article__description portfolio__descript">Поцелуи — повсеместная ежедневная
+                практика. Но зачем люди целуются?
+                Какие смысли вкладывают в этот ритуал?
+                И где корни этой практики?</p>
+            </div>
+            <div class="article__slide portfolio__slide">
+              <h3 class="article__header article__header_big">Журнал &laquo;Т — Л&raquo;</h3>
+              <h3 class="article__header portfolio__header">&laquo;Советы по эффективной удалённой работе&raquo;</h3>
+              <p class="article__description portfolio__descript">Поделилась лайфхаками, которые помогают
+                мне работать продуктивно из дома. </p>
+            </div>
+          </div>
+          <button class="custom-button" type="button">Показать ещё</button>
+        </section>
+        <section class="content">
+          <h2 id="write-me-text">Написать мне</h2>
+          <form class="write-me" action="" method="get" >
+            <div class="write-me__input-wrapper">
+              <label for="sender-name"><h3 class="write-me__input-header">Ваше имя</h3></label>
+              <input class="sender-name" type="text" name="sender-name" value="Иван Иванов" required>
+            </div>
+            <div class="write-me__input-wrapper">
+              <label for="sender-email"><h3 class="write-me__input-header">Email</h3></label>
+              <input class="sender-email" type="email" name="sender-email" value="google@gmail.com" required>
+            </div>
+            <div class="write-me__input-wrapper">
+              <label for="message-text"><h3 class="write-me__input-header">Сообщение</h3></label>
+              <textarea class="commentarea message-text" name="message-text" rows="15" minlength="10" maxlength="200">Напишите здесь ваше сообщение.</textarea>
+            </div>
+            <input class="custom-button submit-button" type="submit" value="Отправить" disabled>
+          </form>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <menu class="header__menu">
+            <li><a href="https://vk.com/revuxorn" target="_blank">ВК</a></li>
+            <li><a href="https://t.me/revicon" target="_blank">Телеграм</a></li>
+            <li><a href="https://www.instagram.com/sashka_letniy" target="_blank">Инстаграм</a></li>
+            <li><a href="https://twitter.com/Sashka_letniy" target="_blank">Твиттер</a></li>
+          </menu>
+        </div>
+      </footer>
+      <script src="src/pages/imdex/script.js"></script>
+  </body>
+</html>
